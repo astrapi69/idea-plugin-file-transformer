@@ -1,102 +1,42 @@
-##################
-# Compiled files #
-##################
-*.class
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-##################
-# intellij files #
-##################
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
 *.iws
 *.iml
 *.ipr
-!.idea/runConfigurations
-.idea/**
-.idea/*.*
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-#################
-# eclipse files #
-#################
-/.project
-/.classpath
-/.settings
-/.tern-project
-
-###########
-### STS ###
-###########
+### Eclipse ###
 .apt_generated
+.classpath
 .factorypath
+.project
+.settings
 .springBeans
 .sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-
-################
 ### NetBeans ###
-################
 /nbproject/private/
 /nbbuild/
+/dist/
 /nbdist/
 /.nb-gradle/
-/build/
 
-#########################
-# maven generated files #
-#########################
-/target
-/.mvn/
-*.versionsBackup
+### VS Code ###
+.vscode/
 
-#############
-# Zip files #
-#############
-*.tar
-*.tar.gz
-*.zip
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.war
-*.ear
-*.rar
-
-##############
-# Logs files #
-##############
-*.log
-
-#################
-# test-ng files #
-#################
-/test-output
-
-############################
-# Binaries generated files #
-############################
-/bin
-
-################
-# gradle files #
-################
-/build
-/.gradle
-/gradle
-/out
-# Ignore Gradle GUI config
-gradle-app.setting
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!/gradle/wrapper/gradle-wrapper.jar
-!/gradle/wrapper/gradle-wrapper.properties
-# Cache of project
-.gradletasknamecache
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-
-##############################################################
-# virtual machine crash logs                                 #
-# see http://www.java.com/en/download/help/error_hotspot.xml #
-##############################################################
-hs_err_pid*
-/.attach_pid*
-/lombok.config
+### Mac OS ###
+.DS_Store
