@@ -1,0 +1,5 @@
+intellij {
+    version = "2022.1.1"
+    type = "IU"
+    plugins = ["com.jetbrains.php:221.5591.52"]
+}
