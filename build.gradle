@@ -42,12 +42,25 @@ apply from: "gradle/testing.gradle"
 
 sourceCompatibility = "$projectSourceCompatibility" as Object
 
+// Set the JVM compatibility versions
 tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-    // uncomment the next line for build with compiler argument -Xlint:deprecation
-    // options.compilerArgs << "-Xlint:deprecation"
-    // uncomment the next line for build with compiler argument -Xlint:unchecked
-    // options.compilerArgs << "-Xlint:unchecked"
+    sourceCompatibility = "11"
+    targetCompatibility = "11"
+}
+
+tasks.patchPluginXml {
+    sinceBuild.set("221")
+    untilBuild.set("231.*")
+}
+
+tasks.signPlugin {
+    certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
+    privateKey.set(System.getenv("PRIVATE_KEY"))
+    password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+}
+
+tasks.publishPlugin {
+    token.set(System.getenv("PUBLISH_TOKEN"))
 }
 
 tasks.named("test") {
